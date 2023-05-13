@@ -13,16 +13,19 @@
   </head>
   <body>
     <header class="header">
-      <div class="container">
-        <a class="logo link" href="index.html">
-          <svg class="logo__icon" width="66" height="52">
-            <use href="./images/icons/icons.svg#icon-logo"></use>
-          </svg>
-        </a>
+      <div class="container header-container">
         <nav class="nav">
+          <a class="logo link" href="index.html">
+            <svg class="logo__icon" width="66" height="52">
+              <use href="./images/icons/icons.svg#icon-logo"></use>
+            </svg>
+          </a>
+
           <ul class="nav__list list">
-            <li class="nav__item nav__item-current">
-              <a class="nav__link link" href="index.html">Home</a>
+            <li class="nav__item">
+              <a class="nav__link nav__link-current link" href="index.html"
+                >Home</a
+              >
             </li>
             <li class="nav__item">
               <a class="nav__link link" href="">About</a>
@@ -38,7 +41,9 @@
             </li>
           </ul>
         </nav>
-        <button class="order-btn bg-color" type="button">Order Now</button>
+        <button class="order-btn bg-button-color" type="button">
+          Order Now
+        </button>
       </div>
     </header>
     <main>
@@ -55,7 +60,9 @@
                 Order now and enjoy a hassle-free and delicious meal from the
                 comfort of your own home.
               </p>
-              <button class="order-btn bg-color">Order Now</button>
+              <button class="order-btn enjoy-btn bg-button-color">
+                Order Now
+              </button>
             </div>
             <img
               class="enjoy__img img"
@@ -177,41 +184,173 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="feedback">
         <div class="container">
-          <h2 class="reviews__title subtitle">What our Customers Say</h2>
-          <p class="reviews__text">
-            Don't just take our word for it - see what our satisfied customers
-            have to say
-          </p>
-          <ul class="reviews__list list">
-            <li class="reviews__list-item reviews-item">
-              <div class="reviews__item-rating reviews-rating">
-                <svg class="reviews-rating__icon" width="17" height="16">
-                  <use href="./images/icons/icons.svg#icon-star"></use>
-                </svg>
-                <svg class="reviews-rating__icon" width="17" height="16">
-                  <use href="./images/icons/icons.svg#icon-star"></use>
-                </svg>
-                <svg class="reviews-rating__icon" width="17" height="16">
-                  <use href="./images/icons/icons.svg#icon-star"></use>
-                </svg>
-                <svg class="reviews-rating__icon" width="17" height="16">
-                  <use href="./images/icons/icons.svg#icon-star"></use>
-                </svg>
-                <svg class="reviews-rating__icon" width="17" height="16">
-                  <use href="./images/icons/icons.svg#icon-star"></use>
-                </svg>
-              </div>
-              <p class="reviews-item__text">
-                “The Best app I have used to order food in a while, so many
-                options to choose from too, I would recommend to a friend, No
-                questions asked”
+          <div class="reviews">
+            <h2 class="reviews__title subtitle">What our Customers Say</h2>
+            <p class="reviews__text">
+              Don't just take our word for it - see what our satisfied customers
+              have to say
+            </p>
+            <ul class="reviews__list list">
+              <li class="reviews__list-item reviews-item">
+                <div class="reviews__item-rating reviews-rating">
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </div>
+                <p class="reviews-item__text">
+                  “The Best app I have used to order food in a while, so many
+                  options to choose from too, I would recommend to a friend, No
+                  questions asked”
+                </p>
+                <div class="reviews__customer">
+                  <img
+                    class="reviews__customer-img"
+                    src="./images/reviews/customer-man.jpg"
+                    width="48"
+                    height="48"
+                    alt="customer man"
+                  />
+                  <div class="reviews__customer-info">
+                    <h3 class="reviews__customer-title">Sumith Shah</h3>
+                    <p class="reviews__customer-text">Some Dude</p>
+                  </div>
+                </div>
+              </li>
+              <li class="reviews__list-item reviews-item">
+                <div class="reviews__item-rating reviews-rating">
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="reviews-rating__icon" width="17" height="16">
+                    <use href="./images/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </div>
+                <p class="reviews-item__text">
+                  “The ease with which I can just go in and order what i want
+                  was amazing, It has been a very pleasant experience ordering
+                  from this app”
+                </p>
+                <div class="reviews__customer">
+                  <img
+                    class="reviews__customer-img"
+                    src="./images/reviews/customer-woman.jpg"
+                    width="48"
+                    height="48"
+                    alt="customer woman"
+                  />
+                  <div class="reviews__customer-info">
+                    <h3 class="reviews__customer-title">Sumith Shah</h3>
+                    <p class="reviews__customer-text">Some Dude</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="subscribe">
+            <div class="subscribe__info">
+              <h2 class="subscribe__info-title">
+                Subscribe To Get Special Offers
+              </h2>
+              <p class="subscribe__info-text">
+                Order now and receive 10% off your first meal with Enjoy Your
+                Favorite Food From Anywhere.
               </p>
-            </li>
-          </ul>
+              <div class="subscribe__info-form subscribe-form">
+                <form class="subscribe__form-form" action=""></form>
+                <input class="subscribe__form-input" type="text" />
+                <a href="" class="subscribe__form-link"></a>
+              </div>
+            </div>
+            <img
+              class="subscribe__img"
+              src="./images/subscribe/banan.jpg"
+              width="608"
+              height="266"
+              alt="banan"
+            />
+          </div>
         </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <d-iv class="footer__functional">
+          <nav class="nav">
+            <svg class="logo__icon" width="66" height="52">
+              <use href="./images/icons/icons.svg#icon-logo"></use>
+            </svg>
+            <ul class="nav__list list">
+              <li class="nav__item nav__item-current">
+                <a class="nav__link link" href="index.html">Home</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="">About</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="">Service</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="">Menu</a>
+              </li>
+              <li class="nav__item">
+                <a class="nav__link link" href="">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__subscribe">
+            <h2 class="footer__subscribe-title">Subscribe</h2>
+            <div class="footer__subscribe-form footer__form">
+              <form
+                class="footer__form-form subscribe__form-form"
+                action=""
+              ></form>
+              <input class="footer__form-input" type="text" />
+            </div>
+            <p class="footer__subscribe-info">
+              By subscribing you agree to with our
+              <a class="footer__link" href="">Privacy Policy</a>
+            </p>
+          </div>
+        </d-iv>
+        <div class="footer__addition-info">
+          <ul class="footer__info-list">
+            <li class="footer__info-item footer-item">
+              <a class="footer-item__link" href="">Privacy Policy</a>
+            </li>
+            <li class="footer__info-item footer-item">
+              <a class="footer-item__link" href="">Terms of Service</a>
+            </li>
+            <li class="footer__info-item footer-item">
+              <a class="footer-item__link" href="">Cookies Settings</a>
+            </li>
+          </ul>
+          <p class="footer__addition-text">2022 FoodSta. All right reserved.</p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
