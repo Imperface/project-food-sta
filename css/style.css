@@ -1,22 +1,9 @@
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/roboto-regular.ttf") format("truetype");
-  font-weight: 400;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/roboto-medium.ttf") format("truetype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("../fonts/roboto-bold.ttf") format("truetype");
-  font-weight: 700;
-}
 :root {
   --color-text-main: #2c2c2c;
-  --color-text-link-current-link: #bbf330;
+  --color-text-link-current: #bbf330;
   --color-text-link-hover-focus: #bbf330;
+  --color-text-addition-link: #7eb101;
+  --color-text-addition-link-hover-focus: #ffe450;
   --color-bg-btn: #bbf330;
   --color-bg-btn-hover-focus: #ffe450;
   --color-bg-btn-white: #ffffff;
@@ -87,13 +74,17 @@ img {
 .nav__link {
   display: block;
   padding: 26px 0;
+  transition-property: color;
+  transition-duration: 500ms;
 }
 .nav__link:hover,
-.nav__link:hover {
+.nav__link:focus {
   color: var(--color-text-link-hover-focus);
 }
 .bg-btn-color {
   background-color: var(--color-bg-btn);
+  transition-property: background-color;
+  transition-duration: 500ms;
 }
 .subtitle {
   font-weight: 700;
@@ -106,16 +97,12 @@ img {
 }
 .bg-btn-white {
   background-color: var(--color-bg-btn-white);
-  border: 2px solid var(--color-brd-btn-white);
+  transition-property: background-color, border;
+  transition-duration: 500ms;
 }
 .bg-btn-white:hover,
 .bg-btn-white:focus {
   background-color: var(--color-bg-btn-white-hover-focus);
-  border: 2px solid transparent;
-}
-.footer__form-input {
-  border: 0.854167px solid var(--color-brd-input);
-  padding: 12px 57px 12px 11px;
 }
 .subscribe-form-input {
   background-color: var(--color-bg-input);
@@ -148,8 +135,8 @@ img {
 .header__nav-list {
   margin-left: auto;
 }
-.header__nav-current {
-  color: var(--color-text-link-current-link);
+.nav-current {
+  color: var(--color-text-link-current);
   text-decoration: underline;
 }
 .header__btn {
@@ -205,6 +192,7 @@ img {
 }
 
 .offerings__info {
+  padding-top: 72px;
   margin-left: auto;
   margin-right: 35px;
 }
@@ -257,6 +245,11 @@ img {
 }
 .offerings__btn {
   padding: 10px 22px;
+  border: 2px solid var(--color-brd-btn-white);
+}
+.offerings__btn:hover,
+.offerings__btn:focus {
+  border: 2px solid transparent;
 }
 /* ======== /OFFERINGS ======== */
 
@@ -373,7 +366,7 @@ img {
   line-height: 1.5;
   max-width: 518px;
 }
-.subscribe-form-input {
+.subscribe__form-input {
   margin-right: 32px;
   padding: 12px;
   min-width: 384px;
@@ -386,22 +379,81 @@ img {
 /* ======== /SUBSCRIBE ======== */
 
 /* ======== FOOTER ======== */
+.footer {
+  box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+}
+.footer__inner {
+  background-image: url(../images/footer/bg.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
 .footer__functional {
-  display: flex;
   padding-top: 100px;
+  padding-bottom: 80px;
+  display: flex;
+}
+.footer__nav-list {
+  margin-left: 148px;
+
 }
 
+.footer__nav-link {
+  padding: 19px 0;
+}
 .footer__nav {
   display: flex;
-  align-items: center;
   flex-grow: 1;
+  align-items: flex-start;
 }
 .footer__subscribe {
   flex-grow: 0;
 }
-.footer__nav-list {
-  display: flex;
-  column-gap: 28px;
+.footer__subscribe-title {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
 }
-
+.footer__form-input {
+  padding: 12px;
+  min-width: 279px;
+}
+.footer__form-btn {
+  padding: 11px 22px;
+  margin-left: 13px;
+  border: 0.854167px solid var(--color-brd-btn-white);
+  transition-property: background-color, border;
+  transition-duration: 500ms;
+}
+.footer__form-btn:hover,
+.footer__form-btn:focus {
+  border: 0.854167px solid transparent;
+}
+.footer__subscribe-form {
+  margin-bottom: 12px;
+}
+.footer__subscribe-info {
+  font-size: 12px;
+  line-height: 1.17;
+}
+.footer__addition-info {
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 1.17;
+}
+.footer__info-list {
+  display: flex;
+  column-gap: 20px;
+}
+.footer__addition-link {
+  color: var(--color-text-addition-link);
+  text-decoration: underline;
+  transition-property: color;
+  transition-duration: 500ms;
+}
+.footer__addition-link:hover,
+.footer__addition-link:focus {
+  color: var(--color-text-addition-link-hover-focus);
+}
 /* ======== /FOOTER ======== */
