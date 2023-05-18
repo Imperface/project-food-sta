@@ -4,6 +4,7 @@
   --color-text-link-hover-focus: #bbf330;
   --color-text-addition-link: #7eb101;
   --color-text-addition-link-hover-focus: #ffe450;
+  --color-bg-header: #fff;
   --color-bg-btn: #bbf330;
   --color-bg-btn-hover-focus: #ffe450;
   --color-bg-btn-white: #ffffff;
@@ -120,6 +121,10 @@ img {
 /* ======== HEADER ======== */
 .header {
   box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  position: sticky;
+  z-index: 10;
+  top: -1px;
+  background-color: var(--color-bg-header);
 }
 .header__inner {
   display: flex;
@@ -394,7 +399,6 @@ img {
 }
 .footer__nav-list {
   margin-left: 148px;
-
 }
 
 .footer__nav-link {
