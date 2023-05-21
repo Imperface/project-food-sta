@@ -44,7 +44,7 @@
             </li>
           </ul>
         </nav>
-        <button class="header__btn bg-btn-color" type="button">
+        <button class="header__btn bg-btn-color" type="button" data-modal-open>
           Order Now
         </button>
       </div>
@@ -123,58 +123,70 @@
           <p class="favorites__text">Looking for something delicious?</p>
           <ul class="favorites__list list">
             <li class="favorites__item">
-              <img
-                class="favorites__item-img"
-                src="./images/favorites/gamburger.jpg"
-                width="395"
-                height="397"
-                alt="gamburger"
-              />
+              <a class="favorites__item-link" href="">
+                <img
+                  class="favorites__item-img"
+                  src="./images/favorites/gamburger.png"
+                  width="315"
+                  height="315"
+                  alt="gamburger"
+                />
+              </a>
             </li>
             <li class="favorites__item">
-              <img
-                class="favorites__item-img"
-                src="./images/favorites/pasta.jpg"
-                width="394"
-                height="397"
-                alt="pasta"
-              />
+              <a class="favorites__item-link" href="">
+                <img
+                  class="favorites__item-img"
+                  src="./images/favorites/pasta.png"
+                  width="315"
+                  height="315"
+                  alt="pasta"
+                />
+              </a>
             </li>
             <li class="favorites__item">
-              <img
-                class="favorites__item-img"
-                src="./images/favorites/pizza.jpg"
-                width="395"
-                height="397"
-                alt="pizza"
-              />
+              <a class="favorites__item-link" href="">
+                <img
+                  class="favorites__item-img"
+                  src="./images/favorites/pizza.png"
+                  width="315"
+                  height="315"
+                  alt="pizza"
+                />
+              </a>
             </li>
             <li class="favorites__item">
-              <img
-                class="favorites__item-img"
-                src="./images/favorites/chicken.jpg"
-                width="395"
-                height="397"
-                alt="chicken"
-              />
+              <a class="favorites__item-link" href="">
+                <img
+                  class="favorites__item-img"
+                  src="./images/favorites/chicken.png"
+                  width="315"
+                  height="315"
+                  alt="chicken"
+                />
+              </a>
             </li>
             <li class="favorites__item">
-              <img
-                class="favorites__item-img"
-                src="./images/favorites/salat.jpg"
-                width="394"
-                height="397"
-                alt="salat"
-              />
+              <a class="favorites__item-link" href="">
+                <img
+                  class="favorites__item-img"
+                  src="./images/favorites/salat.png"
+                  width="315"
+                  height="315"
+                  alt="salat"
+                />
+              </a>
             </li>
             <li class="favorites__item">
-              <img
-                class="favorites__item-img"
-                src="./images/favorites/borshch.jpg"
-                width="395"
-                height="397"
-                alt="borshch"
-              />
+              <a class="favorites__item-link" href="">
+                <img
+                  class="favorites__item-img"
+                  src="./images/favorites/borshch.png"
+                  width="315"
+                  height="315"
+                  alt="borshch"
+                />
+              </a>
             </li>
           </ul>
         </div>
@@ -361,5 +373,45 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal__btn-close" data-modal-close>
+          <svg width="10" height="10">
+            <use href="./images/icons/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <form class="modal__form" action="">
+          <fieldset class="modal__form-set">
+            <legend class="modal__form-title">Order Form</legend>
+            <label class="modal__form-label" for="">Name</label>
+            <input
+              class="modal__form-input"
+              type="text"
+              name="name"
+              placeholder="Your name"
+            />
+            <label class="modal__form-label" for="">Phone number</label>
+            <input
+              class="modal__form-input"
+              type="tel"
+              name="user-tel"
+              placeholder="+38(0 _ _ ) _ _ _  _ _  _ _"
+            />
+            <label class="modal__form-label" for="">E-mail</label>
+            <input
+              class="modal__form-input"
+              type="email"
+              name="email"
+              placeholder="example@gmail.com"
+            />
+          </fieldset>
+          <button class="modal__form-btn bg-btn-white" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
